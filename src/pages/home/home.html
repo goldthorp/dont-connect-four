@@ -1,14 +1,85 @@
 <ion-header>
-  <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+  <ion-navbar color="{{color}}">
+    <ion-title>Level {{level}}</ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only (click)="initBoard()">
+        <ion-icon name="refresh"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+<ion-content>
+  <div *ngIf="board && checkFull()" class="nextlvl" [class.yellow]="color === 'red'" [class.red]="color === 'yellow'">
+    <span class="lvlcomplete">Level Complete</span>
+    <div class="container">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      <div class="square yellow">
+      <div class="square black red">
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+      </div>
+    </div>
+    <span class="nextlevelbtn" (click)="nextLevel()">
+      <span>Next Level</span>
+      <ion-icon name="arrow-forward"></ion-icon>
+    </span>
+  </div>
+  <div *ngIf="board" class="board" [class.complete]="checkFull()">
+    <div *ngFor="let row of board; let i = index;" class="row">
+      <div *ngFor="let cell of row let j = index;" class="cell {{board[i][j]}}" (click)="newMove(j)"></div>
+    </div>
+  </div>
 </ion-content>
