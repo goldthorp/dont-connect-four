@@ -35,15 +35,15 @@ export class HomePage {
     this.admob.banner.prepare().catch(e => console.log(e));
   }
 
-  initBoard() {
-    this.board = new Array(6).fill(null).map(i => new Array(7).fill('empty'));
-    for(let i = 0; i < this.level; i++) {
-      this.newMove(Math.floor(Math.random()*7))
-    }
-    if(!this.checkWorkable()) {
-      this.initBoard();
-    }
-  }
+  // initBoard() {
+  //   this.board = new Array(6).fill(null).map(i => new Array(7).fill('empty'));
+  //   for(let i = 0; i < this.level; i++) {
+  //     this.newMove(Math.floor(Math.random()*7))
+  //   }
+  //   if(!this.checkWorkable()) {
+  //     this.initBoard();
+  //   }
+  // }
 
   newMove(cellIdx) {
     if(this.board[0][cellIdx] === 'empty') {
