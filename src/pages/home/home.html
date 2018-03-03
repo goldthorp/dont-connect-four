@@ -10,7 +10,7 @@
 </ion-header>
 
 <ion-content>
-  <div *ngIf="board && checkFull()" class="nextlvl" [class.yellow]="color === 'red'" [class.red]="color === 'yellow'">
+  <!-- <div *ngIf="board && checkFull()" class="nextlvl" [class.yellow]="color === 'red'" [class.red]="color === 'yellow'">
     <span class="lvlcomplete">Level Complete</span>
     <div class="container">
       <div class="square black red">
@@ -76,8 +76,8 @@
       <span>Next Level</span>
       <ion-icon name="arrow-forward"></ion-icon>
     </span>
-  </div>
-  <div *ngIf="board" class="board" [class.complete]="checkFull()">
+  </div> -->
+  <div *ngIf="board" class="board">
     <div *ngFor="let row of board; let i = index;" class="row">
       <div *ngFor="let cell of row let j = index;" class="cell {{board[i][j]}}" (click)="newMove(j)"></div>
     </div>
