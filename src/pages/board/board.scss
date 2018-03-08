@@ -1,0 +1,117 @@
+page-board {
+  $cell-size: calc(100vw / 7);
+
+  .exit-button {
+    float: right;
+    height: 40px;
+    color: #666;
+  }
+
+  .board {
+    width: 100vw;
+    z-index: 1;
+    position: absolute;
+    margin-top: $cell-size;
+    top: 10%;
+    border-top: 1px solid #ccc;
+  }
+
+  .row {
+    height: $cell-size;
+  }
+
+  .cell {
+    height: 100%;
+    width: $cell-size;
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    padding: 3px;
+  }
+
+  .first {
+    border-left: 1px solid #ccc;
+  }
+
+  .disc {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+
+
+
+  .board-back {
+    height: calc(#{$cell-size} * 7);
+    width: 100vw;
+    position: absolute;
+    top: 10%;
+  }
+
+
+
+  .column {
+    height: 100%;
+    width: $cell-size;
+    float: left;
+    padding-left: 3px;
+    padding-right: 3px;
+  }
+
+  .col-disc {
+    width: 100%;
+    height: calc(#{$cell-size} - 6px);
+    border-radius: 50%;
+    display: none;
+  }
+
+  .animate-disc {
+    display: block;
+  }
+
+  .animate-disc1 {
+    animation: fall1 .083333s;
+  }
+  .animate-disc2 {
+    animation: fall2 .1666667s;
+  }
+  .animate-disc3 {
+    animation: fall3 .25s;
+  }
+  .animate-disc4 {
+    animation: fall4 .3333333s;
+  }
+  .animate-disc5 {
+    animation: fall5 .4166666s;
+  }
+  .animate-disc6 {
+    animation: fall6 .5s;
+  }
+
+
+  @keyframes fall1 {
+    0% {margin-top: 0}
+    100% {margin-top: $cell-size}
+  }
+  @keyframes fall2 {
+    0% {margin-top: 0}
+    100% {margin-top: calc(#{$cell-size} * 2)}
+  }
+  @keyframes fall3 {
+    0% {margin-top: 0}
+    100% {margin-top: calc(#{$cell-size} * 3)}
+  }
+  @keyframes fall4 {
+    0% {margin-top: 0}
+    100% {margin-top: calc(#{$cell-size} * 4)}
+  }
+  @keyframes fall5 {
+    0% {margin-top: 0}
+    100% {margin-top: calc(#{$cell-size} * 5)}
+  }
+  @keyframes fall6 {
+    0% {margin-top: 0}
+    100% {margin-top: calc(#{$cell-size} * 6)}
+  }
+
+
+}

@@ -1,0 +1,13 @@
+<ion-content class="content">
+  <button ion-button icon-only clear class="exit-button" (click)="quitGame()"><ion-icon name="close"></ion-icon></button>
+  <div *ngIf="board" class="board">
+    <div *ngFor="let row of board; let i = index;" class="row">
+      <div *ngFor="let cell of row; let j = index;" class="cell {{j == 0 ? 'first' : 'notfirst'}}" (click)="newMove(j)">
+        <div class="disc {{board[i][j]}}"></div>
+      </div>
+    </div>
+  </div>
+  <div *ngIf="board" class="board-back">
+    <div *ngFor="let col of board[0]; let i = index;" class="column"><div class="col-disc {{animateClass}} {{color}}" [class.animate-disc]="animating == i"></div></div>
+  </div>
+</ion-content>
