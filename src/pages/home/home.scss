@@ -7,14 +7,12 @@ page-home {
     width: 100%;
     font-size: 40px;
     font-weight: lighter;
-    color: #666;
     ion-icon {
       vertical-align: middle;
     }
   }
 
   .score {
-    color: #666;
     text-align: center;
     font-size: 16px;
   }
@@ -25,5 +23,12 @@ page-home {
     padding-top: 40%;
   }
 
+  .change-theme {
+    background: blue;
+    float: right;
+    margin: 10px;
+    padding: 5px;
+    border-radius: 7px;
+  }
 
 }

@@ -1,4 +1,4 @@
-<ion-content class="content">
+<ion-content class="{{theme}}">
   <button ion-button icon-only clear class="exit-button" (click)="quitGame()"><ion-icon name="close"></ion-icon></button>
   <div *ngIf="board" class="board">
     <div *ngFor="let row of board; let i = index;" class="row">
@@ -8,6 +8,6 @@
     </div>
   </div>
   <div *ngIf="board" class="board-back">
-    <div *ngFor="let col of board[0]; let i = index;" class="column"><div class="col-disc {{animateClass}} {{color}}" [class.animate-disc]="animating == i"></div></div>
+    <div *ngFor="let col of board[0]; let i = index;" class="column"><div class="col-disc {{animateClass}} {{active}}" [class.animate-disc]="animating == i"></div></div>
   </div>
 </ion-content>
