@@ -13,9 +13,17 @@ export class HomePage {
   color = 'red';
   playerWins = 0;
   computerWins = 0;
+  theme: string;
 
   constructor(public navCtrl: NavController, private storage: Storage,
               private admob: AdMobFree) {
+    storage.get('theme').then( val => {
+      if(val) {
+        this.theme = val;
+      } else {
+        this.theme = 'classic';
+      }
+    });
     storage.get('playerWins').then( val => {
       if(val) {
         this.playerWins = val;
@@ -42,5 +50,15 @@ export class HomePage {
     this.navCtrl.push('BoardPage');
   }
 
+  changeTheme(currentTheme) {
+    let themes = ['classic', 'night', 'forest', 'mint', 'sport', 'camo'];
+    let currentIdx = themes.indexOf(currentTheme);
+    if(currentIdx == themes.length-1) {
+      this.theme = themes[0];
+    } else {
+      this.theme = themes[currentIdx+1];
+    }
+    this.storage.set('theme', this.theme);
+  }
 
 }

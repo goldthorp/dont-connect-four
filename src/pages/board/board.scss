@@ -13,7 +13,6 @@ page-board {
     position: absolute;
     margin-top: $cell-size;
     top: 10%;
-    border-top: 1px solid #ccc;
   }
 
   .row {
@@ -23,13 +22,7 @@ page-board {
   .cell {
     height: 100%;
     width: $cell-size;
-    border-bottom: 1px solid #ccc;
-    border-right: 1px solid #ccc;
     padding: 3px;
-  }
-
-  .first {
-    border-left: 1px solid #ccc;
   }
 
   .disc {

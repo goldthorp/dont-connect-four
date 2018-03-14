@@ -1,18 +1,173 @@
-.red {
-  background-color: #d96666;
-}
-.yellow {
-  background-color: #ffeb79;
-}
-
-.content {
+.classic {
   background-color: #eee;
+  .player {
+    background-color: #d96666;
+  }
+  .player-text {
+    color: #d96666;
+  }
+  .computer {
+    background-color: #0073e6;
+  }
+  .computer-text {
+    color: #0073e6;
+  }
+  .home-text {
+    color: #666;
+  }
+  .board {
+    border-top: 1px solid #ccc;
+  }
+  .cell {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .first {
+    border-left: 1px solid #ccc;
+  }
 }
 
-.redtext {
-  color: #d96666;
+.night {
+  background-color: #343635;
+  .player {
+    background-color: #347c83;
+  }
+  .player-text {
+    color: #347c83;
+  }
+  .computer {
+    background-color: #cec8c0;
+  }
+  .computer-text {
+    color: #cec8c0;
+  }
+  .home-text {
+    color: #666;
+  }
+  .board {
+    border-top: 1px solid #666;
+  }
+  .cell {
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+  }
+  .first {
+    border-left: 1px solid #666;
+  }
 }
 
-.yellowtext {
-  color: #ffeb79;
+.forest {
+  background-color: #faf2dc;
+  .player {
+    background-color: #4e8064;
+  }
+  .player-text {
+    color: #4e8064;
+  }
+  .computer {
+    background-color: #262d2e;
+  }
+  .computer-text {
+    color: #262d2e;
+  }
+  .home-text {
+    color: #666;
+  }
+  .board {
+    border-top: 1px solid #ccc;
+  }
+  .cell {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .first {
+    border-left: 1px solid #ccc;
+  }
+}
+
+.mint {
+  background-color: #79b599;
+  .player {
+    background-color: #403b2d;
+  }
+  .player-text {
+    color: #403b2d;
+  }
+  .computer {
+    background-color: #eee;
+  }
+  .computer-text {
+    color: #eee;
+  }
+  .home-text {
+    color: #666;
+  }
+  .board {
+    border-top: 1px solid #ccc;
+  }
+  .cell {
+    border-bottom: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+  }
+  .first {
+    border-left: 1px solid #ccc;
+  }
+}
+
+.sport {
+  background-color: #dcc7aa;
+  .player {
+    background-color: #6b7a8f;
+  }
+  .player-text {
+    color: #6b7a8f;
+  }
+  .computer {
+    background-color: #f7882f;
+  }
+  .computer-text {
+    color: #f7882f;
+  }
+  .home-text {
+    color: #666;
+  }
+  .board {
+    border-top: 1px solid #666;
+  }
+  .cell {
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+  }
+  .first {
+    border-left: 1px solid #666;
+  }
+}
+
+.camo {
+  background-color: #7a8a52;
+  .player {
+    background-color: #565f45;
+  }
+  .player-text {
+    color: #565f45;
+  }
+  .computer {
+    background-color: #bfd195;
+  }
+  .computer-text {
+    color: #bfd195;
+  }
+  .home-text {
+    color: #666;
+  }
+  .board {
+    border-top: 1px solid #666;
+  }
+  .cell {
+    border-bottom: 1px solid #666;
+    border-right: 1px solid #666;
+  }
+  .first {
+    border-left: 1px solid #666;
+  }
 }
