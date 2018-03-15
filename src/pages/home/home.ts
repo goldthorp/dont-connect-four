@@ -9,8 +9,6 @@ import { AdMobFree, AdMobFreeBannerConfig } from '@ionic-native/admob-free';
 })
 export class HomePage {
 
-  board: any;
-  color = 'red';
   playerWins = 0;
   computerWins = 0;
   theme: string;

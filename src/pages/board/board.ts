@@ -108,6 +108,8 @@ export class BoardPage {
         this.active = 'computer';
         this.computerMove();
       }, 150);
+    } else if(this.board[0].indexOf('empty') == -1) {
+      this.tieGame();
     } else {
       this.active = 'player';
     }
@@ -260,6 +262,24 @@ export class BoardPage {
         enableBackdropDismiss: false
       });
     }
+  }
+
+  tieGame() {
+    let alert = this.alertCtrl.create({
+      title: 'Tie Game',
+      buttons: [
+        {
+          text: 'Ok',
+          handler: () => {
+            this.showInterstitialAd().then( () => {
+              this.navCtrl.setRoot(HomePage);
+            });
+          }
+        }
+      ],
+      enableBackdropDismiss: false
+    });
+    alert.present();
   }
 
   showInterstitialAd() {
